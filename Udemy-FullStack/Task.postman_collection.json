@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "81107c0d-0b3e-428d-aaf7-daf48399d6c9",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"macAddress\": \"00:1B:44:11:3A:B7\",\n    \"type\": 1,\n    \"title\": \"Comprar café\",\n    \"description\": \"Em tal mercado está na promoção\",\n    \"when\": \"2020-09-19T22:30:00.000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/task/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"macAddress\": \"00:1B:44:11:3A:B7\",\n    \"type\": 1,\n    \"title\": \"Comprar café\",\n    \"description\": \"Em tal mercado está na promoção, bixo\",\n    \"when\": \"2020-09-19T15:30:00.000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/task/update/5f658c9c7a6dcb7b87f5760f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"update",
+						"5f658c9c7a6dcb7b87f5760f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"macAddress\": \"00:1B:44:11:3A:B7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/task/all/00:1B:44:11:3A:B7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"all",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"macAddress\": \"00:1B:44:11:3A:B7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/task/filter/5f65a4ac91e0d531642d9e9d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"filter",
+						"5f65a4ac91e0d531642d9e9d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/task/delete/5f65a4ac91e0d531642d9e9d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"delete",
+						"5f65a4ac91e0d531642d9e9d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Done",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/task/done/5f658c9c7a6dcb7b87f5760f/true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"done",
+						"5f658c9c7a6dcb7b87f5760f",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Late",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/task/late/00:1B:44:11:3A:B7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"late",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/task/today/00:1B:44:11:3A:B7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"today",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Weekly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/task/weekly/00:1B:44:11:3A:B7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"weekly",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monthly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/task/monthly/00:1B:44:11:3A:B7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"monthly",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Annually",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/task/annually/00:1B:44:11:3A:B7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"task",
+						"annually",
+						"00:1B:44:11:3A:B7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
