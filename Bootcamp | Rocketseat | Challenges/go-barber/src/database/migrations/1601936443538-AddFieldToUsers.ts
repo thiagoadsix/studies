@@ -1,4 +1,3 @@
-import { query } from 'express';
 import { MigrationInterface, QueryRunner, TableColumn } from 'typeorm';
 
 export default class AddFieldToUsers1601936443538
