@@ -1,47 +1,10 @@
-const { ApolloServer, gql } = require('apollo-server')
+const { ApolloServer, gql } = require('apollo-server');
+const { importSchema } = require('graphql-import')
 
-const typeDefs = gql`
-    scalar Date
-
-    type Usuario {
-        id: ID
-        name: String!
-        email: String!
-        idade: Int
-        salario: Float
-        vip: Boolean
-    }
-
-    type Query {
-        ola: String
-        horaAtual: Date
-        usuarioLogado: Usuario
-    }
-`;
-
-const resolvers = {
-    Query: {
-        ola() {
-            return 'Mundo!'
-        },
-        horaAtual() {
-            return new Date
-        },
-        usuarioLogado() {
-            return {
-                id: 1,
-                name: 'Thiago Andrade Silva',
-                email: 'thiago@email.com',
-                idade: 20,
-                salario: 3000.00,
-                vip: true
-            }
-        }
-    }
-};
+const resolvers = require('./resolvers/index.js')
 
 const server =  new ApolloServer({
-    typeDefs,
+    typeDefs: importSchema('./schema/index.graphql'),
     resolvers
 });
 
