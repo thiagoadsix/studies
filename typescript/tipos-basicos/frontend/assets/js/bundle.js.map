@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://typescript-study/./src/A0018-webpack/index.ts"],"names":[],"mappings":";;;;;;;AAAa;AACb","file":"bundle.js","sourcesContent":["\"use strict\";\nconsole.log('Eae, rapaz');\n"],"sourceRoot":""}
