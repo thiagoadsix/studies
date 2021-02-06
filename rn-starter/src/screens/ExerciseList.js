@@ -3,7 +3,7 @@ import { View, FlatList, Text, StyleSheet } from "react-native";
 
 const ExerciseList = () => {
   const friends = [
-    { name: "Agnes", age: "19" },
+    { name: "Kamilla", age: "14" },
     { name: "Shalbrt", age: "22" },
     { name: "Vini", age: "20" },
     { name: "Mayara", age: "18" },

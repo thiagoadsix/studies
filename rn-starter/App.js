@@ -15,7 +15,7 @@ const navigator = createStackNavigator(
     ExerciseList: ExerciseList,
   },
   {
-    initialRouteName: "ExerciseList",
+    initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "Learning How To Use React Native :)",
     },
